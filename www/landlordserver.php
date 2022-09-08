@@ -1,14 +1,16 @@
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
-<HTML>
-    <HEAD>
-        <TITLE>Landlord Server</TITLE>
-        <STYLE>
-        BODY {font-family: Arial, Helvetica, sans-serif; font-size: 12pt}
-        </STYLE>
-    </HEAD>
-    <BODY>
-        <H1>Landlord Server</H1>
-        <table>
+<html>
+    <head>
+        <title>Landlord Server</title>
+        <style>
+        body { font-family: Arial, Helvetica, sans-serif; font-size: 12pt;}
+        table{ border: 2px solid grey; border-collapse: collapse; }
+        th, td{ padding: 0.2em; }
+        </style>
+    </head>
+    <body>
+        <h1>Landlord Server</h1>
+        <!-- <table>
             <tr>
                 <td>
                     <form action="landlordserver.php" method="post">
@@ -21,24 +23,26 @@
                     </form>
                 </td>
             </tr>
-        </table>
-        <table>
+        </table> -->
+        <table border=1>
+            <tr><th>Address</th><th>Landlord</th><th>Tenant</th></tr>
         <?php
-            $db_host = '192.168.56.12';
+            $db_host = '192.168.56.13';
             $db_name = 'fvision';
             $db_user = 'landlord';
-            $db_pwd = 'landlordpassword';
+            $db_passwd = 'landlordpassword';
 
             $pdo_dsn = "mysql:host=$db_host;dbname=$db_name";
 
-            $pdo = new PDO($pdo_dsn, $db_user, $db_pwd);
+            $pdo = new PDO($pdo_dsn, $db_user, $db_passwd);
 
             $q = $pdo->query("SELECT * FROM properties");
 
             while($row = $q->fetch()) {
-                echo "<tr><td>".$row["address"]."</td><td>"$row["landlord"]."</td><td>"$row["tenant"];
+                echo "<tr><td>".$row["address"]."</td><td>".$row["landlord"]."</td><td>".$row["tenant"]."</td></tr>\n";
             }
-            
+
             ?>
-    </BODY>
-</HTML>
+        </table>
+    </body>
+ </html>
