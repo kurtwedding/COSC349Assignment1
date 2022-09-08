@@ -29,7 +29,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "landlordserver" do |landlordserver|
     landlordserver.vm.hostname = "landlordserver"
 
-    landlordserver.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.2"
+    landlordserver.vm.network "forwarded_port", guest: 80, host: 8081, host_ip: "127.0.0.1"
 
     landlordserver.vm.network "private_network", ip: "192.168.56.12"
 
