@@ -27,9 +27,9 @@ service mysql start
 # First create a database.
 echo "CREATE DATABASE fvision;" | mysql
 
-# Then create a database user "landlord" and "client" with the given password.
+# Then create database users "landlord" and "client" with the given password.
 echo "CREATE USER 'landlord'@'%' IDENTIFIED BY 'landlordpassword';" | mysql
-eecho "CREATE USER 'client'@'%' IDENTIFIED BY 'clientpassword';" | mysql
+echo "CREATE USER 'client'@'%' IDENTIFIED BY 'clientpassword';" | mysql
 
 # Grant all permissions to the database user "landlord" regarding
 # the "fvision" database that we just created, above.
@@ -42,7 +42,7 @@ export MYSQL_PWD='landlordpassword'
 # ... and run all of the SQL within the setup-database.sql file,
 # which is part of the repository containing this Vagrantfile, so you
 # can look at the file on your host. The mysql command specifies both
-# the user to connect as (webuser) and the database to use (fvision).
+# the user to connect as (landlord) and the database to use (fvision).
 cat /vagrant/setup-database.sql | mysql -u landlord fvision
 
 # By default, MySQL only listens for local network requests,
