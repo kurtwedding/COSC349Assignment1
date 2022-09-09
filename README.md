@@ -1,4 +1,4 @@
-# Assignment 1
+# Landlord Client Database Servers (On Virtual Machines)
 This application creates three virtual machines that communicate to each other over their local network, each with a specific purpose.
 
 The purpose of this application is to create and maintain a database of rental properties addresses and their landlord, and tenant.
