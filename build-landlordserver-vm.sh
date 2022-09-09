@@ -8,7 +8,7 @@ apt-get install -y apache2 php libapache2-mod-php php-mysql
 cp /vagrant/landlord-website.conf /etc/apache2/sites-available/
 
 # activate our website configuration ...
-a2ensite test-website
+a2ensite landlord-website
 # ... and disable the default website provided with Apache
 a2dissite 000-default
 # Restart the webserver, to pick up our configuration changes

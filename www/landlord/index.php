@@ -19,20 +19,7 @@
     </head>
     <body>
         <h1>Landlord Server</h1>
-        <!-- <table>
-            <tr>
-                <td>
-                    <form action="landlordserver.php" method="post">
-                        <input type="submit" name="action" value="Start Server">
-                    </form>
-                </td>
-                <td>
-                    <form action="landlordserver.php" method="post">
-                        <input type="submit" name="action" value="Stop Server">
-                    </form>
-                </td>
-            </tr>
-        </table> -->
+        <p>All currently registered properties, their landlords, and their tenants are listed below.</p>
         <table border=1>
             <tr><th>Address</th><th>Landlord</th><th>Tenant</th></tr>
             <?php
@@ -53,5 +40,21 @@
 
             ?>
         </table>
+        <div style="margin: 8px;" id="databaseEntry"><p>Enter property entry to change: </p>
+            <input style="margin-right:4px;"type="text"  placeholder="Address"><input style="margin-right:4px;" type="text" placeholder="Landlord">
+            <input type="text" placeholder="Tenant"> <button>Change</button>
+        </div>
+        <div style="margin: 8px;" id="databaseEntry"><p>Enter property entry to add to the database: </p>
+            <input style="margin-right:4px;"type="text"  placeholder="Address"><input style="margin-right:4px;" type="text" placeholder="Landlord">
+            <input type="text" placeholder="Tenant"> <button>Add</button>
+        </div>
+        <div style="margin: 8px;" id="databaseEntry"><p>Enter property entry to remove from the database: </p>
+            <input style="margin-right:4px;"type="text"  placeholder="Address"><input style="margin-right:4px;" type="text" placeholder="Landlord">
+            <input type="text" placeholder="Tenant"> <button>Remove</button>
+        </div>
+        <footer style="font-size: 10px;">Click <a href= "http://localhost:8080">here</a> to go to the client website.</footer>
+        <!-- 
+            I'm not sure how to send the data from the input fields to the dbserver, but the table above shows that the dbserver and the client website are communicating.
+        -->
     </body>
  </html>

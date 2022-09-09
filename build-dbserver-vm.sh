@@ -34,6 +34,7 @@ echo "CREATE USER 'client'@'%' IDENTIFIED BY 'clientpassword';" | mysql
 # Grant all permissions to the database user "landlord" regarding
 # the "fvision" database that we just created, above.
 echo "GRANT ALL PRIVILEGES ON fvision.* TO 'landlord'@'%'" | mysql
+echo "GRANT ALL PRIVILEGES ON fvision.* TO 'client'@'%'" | mysql
 
 # Set the MYSQL_PWD shell variable that the mysql command will
 # try to use as the database password ...
