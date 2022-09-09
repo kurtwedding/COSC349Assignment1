@@ -18,7 +18,7 @@
         </style>
     </head>
     <body>
-        <h1>Landlord Server</h1>
+        <h1>Landlord Page</h1>
         <p>All currently registered properties, their landlords, and their tenants are listed below.</p>
         <table border=1>
             <tr><th>Address</th><th>Landlord</th><th>Tenant</th></tr>

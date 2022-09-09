@@ -19,7 +19,7 @@
         </style>
     </head>
     <body>
-        <h1>Client Test Page</h1>
+        <h1>Client Page</h1>
         <p>
             Available properties for rent:
         </p>
